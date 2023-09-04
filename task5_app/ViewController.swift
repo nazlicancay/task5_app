@@ -7,11 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SongSelectionDelegate {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var containerView: UIView!
 
+    @IBOutlet weak var ChoosenSongLabel: UILabel!
     var soundViewController: UIViewController!
     var playlistViewController: UIViewController!
     var songsViewController: UIViewController!
@@ -24,7 +25,7 @@ class ViewController: UIViewController {
         songsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SongsViewController") as! SongsViewController
 
         // Set the titles on your segmented control
-        segmentedControl.setTitle("Sound", forSegmentAt: 0)
+        segmentedControl.setTitle("Sounds", forSegmentAt: 0)
         segmentedControl.setTitle("Playlist", forSegmentAt: 1)
         segmentedControl.setTitle("Songs", forSegmentAt: 2)
 
@@ -33,7 +34,16 @@ class ViewController: UIViewController {
         soundViewController.view.frame = containerView.bounds
         containerView.addSubview(soundViewController.view)
         soundViewController.didMove(toParent: self)
+        
+        (soundViewController as! SoundViewController).delegate = self
+        (songsViewController as! SongsViewController).delegate = self
+
     }
+    
+    func songDidSelect(name: String) {
+           // Update the label
+        ChoosenSongLabel.text = name
+       }
     
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         // Remove the current child view
@@ -62,6 +72,11 @@ class ViewController: UIViewController {
         containerView.addSubview(newChildViewController.view)
         newChildViewController.didMove(toParent: self)
     }
+   
+}
+
+protocol SongSelectionDelegate: AnyObject {
+    func songDidSelect(name: String)
 }
 
 

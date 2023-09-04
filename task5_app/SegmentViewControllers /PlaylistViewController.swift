@@ -6,16 +6,53 @@
 //
 
 import UIKit
+import MediaPlayer
 
-class PlaylistViewController: UIViewController {
+class PlaylistViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    var playlists: [MPMediaItemCollection] = []
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        let query = MPMediaQuery.playlists()
+        if let playlistCollections = query.collections {
+            self.playlists = playlistCollections
+            tableView.reloadData()
+        }
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return playlists.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlaylistCell", for: indexPath)
+        let playlist = playlists[indexPath.row]
+
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.text = playlist.value(forProperty: MPMediaPlaylistPropertyName) as? String
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPlaylist = playlists[indexPath.row]
+        // Do something with the selected playlist
+    }
+   
+    }
+    
+
+
+ 
+
+    
+
+
 
     /*
     // MARK: - Navigation
@@ -27,4 +64,4 @@ class PlaylistViewController: UIViewController {
     }
     */
 
-}
+

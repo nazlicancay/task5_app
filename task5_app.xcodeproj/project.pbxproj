@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6251E4DB2AA662EF005C4093 /* DeepFutureGarage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6251E4D82AA662EE005C4093 /* DeepFutureGarage.mp3 */; };
+		6251E4DC2AA662EF005C4093 /* InsideYou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6251E4D92AA662EF005C4093 /* InsideYou.mp3 */; };
+		6251E4DD2AA662EF005C4093 /* TheBestJazzClubinNewOrleans.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6251E4DA2AA662EF005C4093 /* TheBestJazzClubinNewOrleans.mp3 */; };
 		625C7A582AA5EA71002277B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C7A572AA5EA71002277B0 /* AppDelegate.swift */; };
 		625C7A5A2AA5EA71002277B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C7A592AA5EA71002277B0 /* SceneDelegate.swift */; };
 		625C7A5C2AA5EA71002277B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C7A5B2AA5EA71002277B0 /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6251E4D82AA662EE005C4093 /* DeepFutureGarage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DeepFutureGarage.mp3; sourceTree = "<group>"; };
+		6251E4D92AA662EF005C4093 /* InsideYou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = InsideYou.mp3; sourceTree = "<group>"; };
+		6251E4DA2AA662EF005C4093 /* TheBestJazzClubinNewOrleans.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TheBestJazzClubinNewOrleans.mp3; sourceTree = "<group>"; };
 		625C7A542AA5EA71002277B0 /* task5_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task5_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		625C7A572AA5EA71002277B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		625C7A592AA5EA71002277B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6251E4D72AA662E0005C4093 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				6251E4D82AA662EE005C4093 /* DeepFutureGarage.mp3 */,
+				6251E4D92AA662EF005C4093 /* InsideYou.mp3 */,
+				6251E4DA2AA662EF005C4093 /* TheBestJazzClubinNewOrleans.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		625C7A4B2AA5EA71002277B0 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +78,7 @@
 		625C7A562AA5EA71002277B0 /* task5_app */ = {
 			isa = PBXGroup;
 			children = (
+				6251E4D72AA662E0005C4093 /* Sounds */,
 				625C7A6B2AA5EC7F002277B0 /* SegmentViewControllers  */,
 				625C7A572AA5EA71002277B0 /* AppDelegate.swift */,
 				625C7A592AA5EA71002277B0 /* SceneDelegate.swift */,
@@ -144,7 +161,10 @@
 			files = (
 				625C7A642AA5EA73002277B0 /* LaunchScreen.storyboard in Resources */,
 				625C7A612AA5EA73002277B0 /* Assets.xcassets in Resources */,
+				6251E4DB2AA662EF005C4093 /* DeepFutureGarage.mp3 in Resources */,
 				625C7A5F2AA5EA71002277B0 /* Main.storyboard in Resources */,
+				6251E4DD2AA662EF005C4093 /* TheBestJazzClubinNewOrleans.mp3 in Resources */,
+				6251E4DC2AA662EF005C4093 /* InsideYou.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,8 +327,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N93GQ4NB86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = task5_app/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "\"We need access to your music library for you to select songs.\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +341,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ncancay.task5-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "ncancay.task5-app2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -334,8 +356,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N93GQ4NB86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = task5_app/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "\"We need access to your music library for you to select songs.\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -346,7 +370,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ncancay.task5-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "ncancay.task5-app2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
