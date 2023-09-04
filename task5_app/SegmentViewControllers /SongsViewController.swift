@@ -45,6 +45,7 @@ class SongsViewController: UIViewController, MPMediaPickerControllerDelegate {
         if let firstItem = mediaItemCollection.items.first,
                let title = firstItem.title {
                 delegate?.songDidSelect(name: title)
+             
             }
         tableView.reloadData()
         dismiss(animated: true, completion: nil)
@@ -99,3 +100,5 @@ extension SongsViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
 }
+
+

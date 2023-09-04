@@ -19,6 +19,8 @@ class ViewController: UIViewController, SongSelectionDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+
 
         soundViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SoundViewController") as! SoundViewController
         playlistViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlaylistViewController") as! PlaylistViewController
