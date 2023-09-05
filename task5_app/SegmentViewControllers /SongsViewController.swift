@@ -7,6 +7,8 @@
 
 import UIKit
 import MediaPlayer
+import AVFoundation
+
 
 class SongsViewController: UIViewController, MPMediaPickerControllerDelegate {
 
@@ -19,10 +21,22 @@ class SongsViewController: UIViewController, MPMediaPickerControllerDelegate {
 
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
+        
+        
         tableView.delegate = self
         tableView.dataSource = self
         musicPlayer = MPMusicPlayerController.systemMusicPlayer
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print("Setting category to AVAudioSessionCategoryPlayback failed.")
+        }
+        
 
         // Do any additional setup after loading the view.
     }
